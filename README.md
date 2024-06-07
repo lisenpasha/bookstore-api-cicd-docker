@@ -97,6 +97,24 @@ Then, navigate to each service directory and install dependencies:
     npm install
     cd ..
     
+# Alternatively, you can update the package.json file in the bookstore-api directory to the following configuration. This will allow you to run npm install once in the root directory, and it will automatically install dependencies for both the Book and User services:
+
+    {
+        "name": "bookstore-api",
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js",
+        "scripts": {
+            "develop": "concurrently \"cd user-service && npm run develop\" \"cd book-service && npm run develop\"",
+            "postinstall": "cd user-service && npm install && cd ../book-service && npm install"
+        },
+        "devDependencies": {
+            "concurrently": "^6.2.1"
+        },
+        "keywords": [],
+        "author": "",
+        "license": "ISC"
+    }
 
 3. **Running the Services**
 
