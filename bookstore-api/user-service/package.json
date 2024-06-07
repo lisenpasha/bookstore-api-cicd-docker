@@ -1,0 +1,24 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "develop": "nodemon index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "json2csv": "^6.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.22.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.3"
+  }
+}
