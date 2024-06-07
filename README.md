@@ -191,6 +191,9 @@ protecting sensitive information from unauthorized access.
 4. Keeping Secrets Safe: Storing sensitive information like passwords and API keys securely, and not exposing them in the code, is crucial. This helps prevent accidental leaks of important data.
 
 
+
+
+
 How would you make this solution scale to millions of records?
 
 To handle millions of records efficiently, we should consider several strategies:
