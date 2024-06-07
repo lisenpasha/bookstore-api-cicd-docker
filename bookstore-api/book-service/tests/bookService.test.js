@@ -5,7 +5,7 @@ describe('Book Service Tests', () => {
   test('should fetch all books', () => {
     const fetchedBooks = fetchBooks();
     expect(fetchedBooks).toBeDefined();
-    expect(books.length).toBe(fetchedBooks.length); // Assuming there are 3 books in the mock data
+    expect(books.length).toBe(fetchedBooks.length); // Assuming there are the same number of books in the mock data
   });
 
   test('should fetch book by ID', () => {

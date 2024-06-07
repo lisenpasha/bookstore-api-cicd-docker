@@ -43,7 +43,7 @@ const exportUserReadings = async (req, res) => {
       return res.status(400).send('Invalid CSV headers format, it requires 6 headers');
     }
 
-    //Validation: Check if each required header name is correct and in the required position before proceeding.
+    //Validation: Check if each incoming header name is correct and in the required position before proceeding.
     const incorrectHeaders = csvHeaders.map((element, index) => {
       if (element !== requiredHeaders[index]) {
         return { actual: element, expected: requiredHeaders[index]};
@@ -51,7 +51,7 @@ const exportUserReadings = async (req, res) => {
     }).filter(item => item !== undefined);
     
     if (incorrectHeaders.length > 0) {
-      let response = ''
+      let response = '' //used so we can return all problematic headers.
       incorrectHeaders.forEach(header => {
         response +=`Incorrect header. Found "${header.actual}", but expected "${header.expected}".\n`;
       });
