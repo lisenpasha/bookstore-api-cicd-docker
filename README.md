@@ -188,7 +188,6 @@ The project configuration is managed through package.json files located in the r
 By following the steps outlined in this README, you should be able to set up, run, and test the Bookstore API. The services are modular, making it easy to maintain and extend functionality.
 
 
-Happy coding!
 
 ----------Questions---------
 
