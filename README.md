@@ -130,7 +130,7 @@ In the root directory of the project(bookstore-api),where the package.json with 
   
 This command will start both the User Service on port 8081 and the Book Service on port 8082.
 
-2-Running Each Service Individually
+2-Running Each Service Individually On Seperated Terminals
 
 1.User Service
 
