@@ -191,7 +191,7 @@ protecting sensitive information from unauthorized access.
 4. Keeping Secrets Safe: Storing sensitive information like passwords and API keys securely, and not exposing them in the code, is crucial. This helps prevent accidental leaks of important data.
 
 
-2. How would you make this solution scale to millions of records?
+How would you make this solution scale to millions of records?
 
 To handle millions of records efficiently, we should consider several strategies:
 1. Optimizing Data Storage: As our database grows, we need to ensure that it's organized in a way that allows for fast access. This can involve indexing important fields so that searches are quicker and splitting the database into smaller, more manageable pieces.
