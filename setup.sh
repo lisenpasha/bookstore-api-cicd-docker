@@ -17,6 +17,16 @@ cd book-service
 npm install
 cd ..
 
+echo "Running tests for user-service..."
+cd user-service
+npm run test
+cd ..
+
+echo "Running tests for book-service..."
+cd book-service
+npm run test
+cd ..
+
 echo "Starting user-service..."
 cd user-service
 npm run develop &
