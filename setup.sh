@@ -35,7 +35,3 @@ sleep 10
 echo "Both services are running. You can now use Postman to interact with the APIs."
 echo "User Service: http://localhost:8081"
 echo "Book Service: http://localhost:8082"
-
-# Wait for the services to be stopped
-wait $USER_SERVICE_PID
-wait $BOOK_SERVICE_PID
