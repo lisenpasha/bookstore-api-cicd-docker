@@ -4,6 +4,12 @@ FROM node:14
 # Create and change to the app directory
 WORKDIR /usr/src/app
 
+# Copy the setup.sh script to the app directory
+COPY setup.sh .
+
+# Make the setup.sh script executable
+RUN chmod +x setup.sh
+
 # Copy the bookstore-api package.json and package-lock.json
 COPY bookstore-api/package*.json ./bookstore-api/
 
@@ -26,9 +32,6 @@ RUN npm install
 
 # Go back to the app root directory
 WORKDIR /usr/src/app
-
-# Make the setup.sh script executable
-RUN chmod +x setup.sh
 
 # Expose the ports on which the services run
 EXPOSE 8081 8082
