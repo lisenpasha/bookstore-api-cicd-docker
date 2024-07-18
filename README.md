@@ -20,3 +20,12 @@ The CI/CD pipeline is defined in the ci.yml file. It performs the following step
 ##### 5. Verifies that both services are running.
 ##### 6. Stops the services.
 ##### 7. Builds and pushes a Docker image to Docker Hub.
+
+
+## Docker Integration
+
+The Dockerfile builds a Docker image for the project, installing dependencies for both the User and Book services, and running the setup.sh script to start the services.
+
+## Setup Script
+
+The setup.sh script installs dependencies, runs tests, and starts both services.
