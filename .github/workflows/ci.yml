@@ -1,0 +1,38 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+   build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Make setup.sh executable
+      run: chmod +x setup.sh
+
+    - name: Run setup.sh
+      run: ./setup.sh
+
+    - name: Verify user-service is running
+      run: |
+        curl -f http://localhost:8081/users || exit 1
+
+    - name: Verify book-service is running
+      run: |
+        curl -f http://localhost:8082/books || exit 1
+
+    - name: Kill running services
+      run: |
+        pkill -f 'node'
+        echo "All services have been stopped."
