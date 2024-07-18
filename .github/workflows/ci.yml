@@ -36,3 +36,11 @@ jobs:
       run: |
         pkill -f 'node'
         echo "All services have been stopped."
+        
+    - name: Build And Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: lisenpasha/bookstore-api
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
